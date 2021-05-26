@@ -1,21 +1,19 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+function renderLicenseBadge(license) {
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {}
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {}
+  // getting badge from shields.io
+  const licenseTypes = {'MIT License': 'MIT', 'The Unlicense': 'Unlicense','GPL License': 'GPL', 'Apache2.0 License': 'Apache2.0'}
+  return `https://img.shields.io/badge/license-${licenseTypes[license]}-green`
+}
 
 function generateMarkdown(data) {
 
   //Destructuring data object
   const {projectTitle, descriptionQuestion, installationQuestion, usageQuestion, licenseQuestion, contributionQuestion, testQuestion, emailQuestion,} = data;
 
-  return `# ${data.projectTitle}
+  // generating markdown file and rendering software license
+  return `![Badge](${renderLicenseBadge(licenseQuestion)})
+  
+  # ${projectTitle}
 
   ## Description
   ${descriptionQuestion}
@@ -42,6 +40,9 @@ function generateMarkdown(data) {
 
   ## Questions
   For more information or questions contact me at [${emailQuestion}](mailto:${emailQuestion})
+
+  ## License
+  The project is covered under ${licenseQuestion}
   `;
 }
 

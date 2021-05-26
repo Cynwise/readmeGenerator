@@ -28,7 +28,7 @@ const questions = [
       name: 'licenseQuestion',
       message: 'Please provide a license for this project:',
       // license choices
-      choices: ['MIT', 'The Unlicense', 'GNU GPL v3', 'Apache 2.0', 'None'], 
+      choices: ['MIT License', 'The Unlicense', 'GPL License', 'Apache2.0 License', 'No License'], 
     },
     {
       type: 'input',
@@ -47,7 +47,6 @@ const questions = [
     }   
 ]
 
-// TODO: Create a function to write README file
 function writeToFile(fileName, data) {
   inquirer.prompt(data).then((answers) => {
     fs.writeFile(
