@@ -8,40 +8,48 @@ function renderLicenseBadge(license) {
 function generateMarkdown(data) {
 
   //Destructuring data object
-  const {projectTitle, descriptionQuestion, installationQuestion, usageQuestion, licenseQuestion, contributionQuestion, testQuestion, emailQuestion,} = data;
+  const {projectTitle, descriptionQuestion, installationQuestion, usageQuestion, licenseQuestion, contributionQuestion, testQuestion, emailQuestion, githubQuestion} = data;
 
   // generating markdown file and rendering software license
-  return `![Badge](${renderLicenseBadge(licenseQuestion)})
+  return `# ${projectTitle}
   
-  # ${projectTitle}
+  ![Badge](${renderLicenseBadge(licenseQuestion)})
 
-  ## Description
+## Description
+
   ${descriptionQuestion}
   
-  ## Table of Contents
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Contribute](#contribution)
-  - [Tests](#test)
-  - [Questions](#email)
-  - [License](#license)
+## Table of Contents
 
-  ## Installation
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contribute](#contribution)
+- [Tests](#test)
+- [Questions](#email)
+- [License](#license)
+
+## Installation
+
   ${installationQuestion}
 
-  ## Usage
+## Usage
+
   ${usageQuestion}
 
-  ## Contribute
+## Contribute
+
   ${contributionQuestion}
 
-  ## Tests
+## Tests
+
   ${testQuestion}
 
-  ## Questions
-  For more information or questions contact me at [${emailQuestion}](mailto:${emailQuestion})
+## Questions
 
-  ## License
+  For more information or questions contact me at [${emailQuestion}](mailto:${emailQuestion}) or (https://github.com/${githubQuestion})
+
+## License
+
   The project is covered under ${licenseQuestion}
   `;
 }
