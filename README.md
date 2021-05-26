@@ -8,7 +8,7 @@
 
 ## Installation
 
-    run npm install in terminal 
+    run "npm install" in terminal 
 
 ## Built With
 
@@ -18,7 +18,7 @@
 
 ## Usage Instructions
 
-    Run node index.js and you'll immediately be prompted to start asking questions about your project. Once all questions are answered the application will indicate that the readme file has been generated and it'll be placed inside of the generatedReadme file.
+Run node index.js and you'll immediately be prompted to start asking questions about your project. Once all questions are answered the application will indicate that the readme file has been generated and it'll be placed inside of the generatedReadme file.
 
 ## Contributers
 
