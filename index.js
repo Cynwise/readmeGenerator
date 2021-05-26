@@ -24,11 +24,11 @@ const questions = [
       message: 'What is the intended usage?',
     },
     {
-      type: 'input',
+      type: 'list',
       name: 'licenseQuestion',
       message: 'Please provide a license for this project:',
       // license choices
-      choices: ["MIT", "The Unlicense", "GNU GPL v3", "Apache 2.0", "None"],
+      choices: ['MIT', 'The Unlicense', 'GNU GPL v3', 'Apache 2.0', 'None'], 
     },
     {
       type: 'input',
